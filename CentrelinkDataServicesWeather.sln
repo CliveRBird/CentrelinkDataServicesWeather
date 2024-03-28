@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDS.Weather", "CDS.Weather\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uqs.OpenWeather", "OpenWeatherClient\Uqs.OpenWeather\Uqs.OpenWeather.csproj", "{59F01FE0-ECC9-4D0D-9040-3D63AC8795C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDS.Weather.Tests.Unit", "CDS.Weather.Tests.Unit\CDS.Weather.Tests.Unit.csproj", "{1A90D11D-C335-4AA8-80AD-60838C995E5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{59F01FE0-ECC9-4D0D-9040-3D63AC8795C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F01FE0-ECC9-4D0D-9040-3D63AC8795C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F01FE0-ECC9-4D0D-9040-3D63AC8795C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A90D11D-C335-4AA8-80AD-60838C995E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A90D11D-C335-4AA8-80AD-60838C995E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A90D11D-C335-4AA8-80AD-60838C995E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A90D11D-C335-4AA8-80AD-60838C995E5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
