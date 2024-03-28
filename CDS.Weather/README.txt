@@ -18,5 +18,7 @@ rem Now start to add the unit tests to the solution.
 dotnet new xunit -o CDS.Weather.Tests.Unit -f net8.0
 dotnet sln add CDS.Weather.Tests.Unit
 dotnet add CDS.Weather.Tests.Unit reference CDS.Weather
+rem run the single template empty test.
+dotnet test
 
 
