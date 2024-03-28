@@ -26,8 +26,11 @@ public class WeatherForecastController : ControllerBase
         "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger,
-        IClient client, INowWrapper nowWrapper, IRandomWrapper randomWrapper)
+    public WeatherForecastController(   ILogger<WeatherForecastController> logger,
+                                        IClient client, 
+                                        INowWrapper nowWrapper, 
+                                        IRandomWrapper randomWrapper
+                                    )
     {
         _logger = logger;
         _client = client;
