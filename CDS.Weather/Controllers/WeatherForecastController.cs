@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using OpenWeatherMapSharp;
-
 // See url below on how to acquire a free api key.
 // https://www.nuget.org/packages/OpenWeatherMapSharp
 using OpenWeatherMapSharp.Models;
+using OpenWeatherMapSharp;
+// Now using AdamTibi.OpenWeather as it seems better than OpenWeatherMapSharp.
+using AdamTibi.OpenWeather;
+
+
+using CDS.Weather.Wrappers;
 
 namespace CDS.Weather.Controllers;
 
@@ -14,6 +18,11 @@ public class WeatherForecastController : ControllerBase
     private const int FORECAST_DAYS = 5;
     private readonly ILogger<WeatherForecastController> _logger;
     private readonly IConfiguration _config;
+
+    private readonly IClient _client;
+    private readonly INowWrapper _nowWrapper;
+    private readonly IRandomWrapper _randomWrapper;
+
     private const string OPENWEATHERMAPAPIKEY = "OWMAPIKEY";
 
     private static readonly string[] Summaries = new[]
@@ -43,21 +52,14 @@ public class WeatherForecastController : ControllerBase
         const decimal GREENWICH_LON = 0.0052m;
         string apiKey = _config["OpenWeather:Key"];
         HttpClient httpClient = new HttpClient();
-        
-        OpenWeatherMapService service = new(OPENWEATHERMAPAPIKEY);
-        double latitude = 51.4810;
-        double longitude = 0.0052;
-        // TODO: The real API weather service doesn't have to work for the project.
-        OpenWeatherMapServiceResponse<WeatherRoot> serviceResponse = await service.GetWeatherAsync(latitude, longitude);
-        /*
         Client openWeatherClient = new Client(apiKey, httpClient);
         OneCallResponse res = await openWeatherClient.OneCallAsync
             (GREENWICH_LAT, GREENWICH_LON, new[] {
                 Excludes.Current, Excludes.Minutely,
                 Excludes.Hourly, Excludes.Alerts }, Units.Metric);
-        */
+        
         WeatherForecast[] wfs = new WeatherForecast[FORECAST_DAYS];
-        /*
+        
         for (int i = 0; i < wfs.Length; i++)
         {
             var wf = wfs[i] = new WeatherForecast();
@@ -66,7 +68,7 @@ public class WeatherForecastController : ControllerBase
             wf.TemperatureC = (int)Math.Round(forecastedTemp);
             wf.Summary = MapFeelToTemp(wf.TemperatureC);
         }
-        */
+        
         return wfs;
        
     }
