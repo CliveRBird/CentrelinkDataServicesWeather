@@ -67,6 +67,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSingleton<IClient>(_ => {
+    // Below is useful for load testing. It's undsireable to swamp the real API when load testing your app.
+    // So use the new ClientStub() object to avoid invoking too many calls to the real Web site. Instead use
+    // the local test environment. 
     bool isLoad = bool.Parse(builder.Configuration["LoadTest:IsActive"]);
     if (isLoad) return new ClientStub();
     else
