@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+// See url below on how to acquire a free api key.
+// https://www.nuget.org/packages/OpenWeatherMapSharp
+using OpenWeatherMapSharp.Models;
 
-namespace Uqs.Weather.Controllers;
+namespace CDS.Weather.Controllers;
 
 [ApiController]
 [Route("[controller]")]

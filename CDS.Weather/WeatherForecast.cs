@@ -1,4 +1,4 @@
-namespace Uqs.Weather;
+namespace CDS.Weather;
 
 public class WeatherForecast
 {
