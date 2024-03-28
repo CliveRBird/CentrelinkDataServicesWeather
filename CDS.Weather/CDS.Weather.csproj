@@ -17,8 +17,4 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="UqsOpenWeather.sln" />
-  </ItemGroup>
-
 </Project>
