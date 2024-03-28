@@ -12,5 +12,6 @@ dotnet sln add CDS.Weather
 
 rem From VS Tools, NuGet Package Manager runn the command below.
 NuGet\Install-Package OpenWeatherMapSharp -Version 3.1.4
+rem from package manager browsing the ALL web NuGet repos for AdamTibi.OpenWeather package
 
 
