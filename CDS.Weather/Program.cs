@@ -1,5 +1,18 @@
 
-/* Original boilder template code
+/* 
+ * 
+ * 
+ * 
+ * Original default boilder template code on issuing   
+ * 
+ * cd C:\Users\Administrator\source\repos
+ * md CentrelinkDataServicesWeather
+ * cd CentrelinkDataServicesWeather
+ * dotnet new sln
+ * dotnet new webapi -o CDS.Weather -f net8.0
+ * dotnet sln add CDS.Weather
+ * 
+ * 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
