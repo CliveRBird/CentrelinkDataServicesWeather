@@ -6,6 +6,15 @@ namespace CDS.Weather.Tests.Unit;
 
 public class WeatherForecastControllerTests
 {
+
+    [Fact]
+    public void Method_Condition_Expectation()
+    {
+        // Arrange
+        // Act
+        // Assert
+    }
+
     [Fact]
     public void ConvertCToF_0Celsius_32Fahrenheit()
     {
