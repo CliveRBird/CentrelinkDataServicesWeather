@@ -22,6 +22,15 @@ rem run the single template empty test.
 dotnet test
 
 rem From package manager browsing the ALL web NuGet repos for NSubsitute package 
+rem Alternatively install the package using the line below. Analysers is optional.
+dotnet add package NSubstitute
+dotnet add package NSubstitute.Analyzers.CSharp
+
+rem These two packages are for faking during unit testing.
+rem It should be possible to use EF InMemory with PostGreSQL or Mongo for JSON document handling
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+dotnet add package RabbitMQ.Fakes.DotNetStandard --version 2.2.1
+
 
 rem Using the Dockerfile, create the image and test it locally before deploying to K8 cluster.
 cd C:\Users\Administrator\source\repos\CentrelinkDataServicesWeather
