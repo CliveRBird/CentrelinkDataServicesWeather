@@ -17,7 +17,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0.3 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
-# Expose the port your application will run on
+# Expose the port CDSWeatherForecast-web-api application will run on
 EXPOSE 80
 
 # Start the application
