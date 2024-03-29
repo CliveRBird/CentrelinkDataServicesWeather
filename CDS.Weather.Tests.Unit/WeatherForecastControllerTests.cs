@@ -41,7 +41,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] {2, nextDayTemp, 4, 5.5, 6, day5Temp, 8};
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -59,7 +59,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] { 2, nextDayTemp, 4, 5.5, 6, day5Temp, 8 };
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -77,7 +77,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] { 2, nextDayTemp, 4, 5.5, 6, day5Temp, 8 };
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -95,7 +95,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] { 2, nextDayTemp, 4, 5.5, 6, day5Temp, 8 };
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -114,7 +114,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] { 2, nextDayTemp, 4, 5.5, 6, day5Temp, 8 };
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -123,7 +123,7 @@ public class WeatherForecastControllerTests
         IEnumerable<WeatherForecast> wfs = await controller.GetReal();
 
         // Assert
-        Assert.Equal(new DateTime(2022, 1, 2), wfs.First().Date);
+        Assert.Equal(new DateTime(2024, 4, 2), wfs.First().Date);
     }
 
     [Fact]
@@ -132,7 +132,7 @@ public class WeatherForecastControllerTests
         // Arrange
         const double nextDayTemp = 3.3;
         const double day5Temp = 7.7;
-        var today = new DateTime(2022, 1, 1);
+        var today = new DateTime(2024, 4, 1);
         var realWeatherTemps = new[] { 2, nextDayTemp, 4, 5.5, 6, day5Temp, 8 };
         var clientStub = new ClientStub(today, realWeatherTemps);
         var controller = new WeatherForecastController(null!, clientStub, null!, null!);
@@ -141,7 +141,7 @@ public class WeatherForecastControllerTests
         IEnumerable<WeatherForecast> wfs = await controller.GetReal();
 
         // Assert
-        Assert.Equal(new DateTime(2022, 1, 6), wfs.Last().Date);
+        Assert.Equal(new DateTime(2024, 4, 6), wfs.Last().Date);
     }
 
     [Fact]
