@@ -21,6 +21,8 @@ dotnet add CDS.Weather.Tests.Unit reference CDS.Weather
 rem run the single template empty test.
 dotnet test
 
+cd C:\Users\Administrator\source\repos\CentrelinkDataServicesWeather
+
 rem From package manager browsing the ALL web NuGet repos for NSubsitute package 
 rem Alternatively install the package using the line below. Analysers is optional.
 dotnet add package NSubstitute
@@ -30,6 +32,18 @@ rem These two packages are for faking during unit testing.
 rem It should be possible to use EF InMemory with PostGreSQL or Mongo for JSON document handling
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package RabbitMQ.Fakes.DotNetStandard --version 2.2.1
+rem JWT Faker for unit and integration testing.
+rem See URL https://github.com/webmotions/fake-authentication-jwtbearer
+dotnet add package WebMotions.Fake.Authentication.JwtBearer --version 8.0.1
+
+rem Integration testing
+cd C:\Users\Administrator\source\repos\CentrelinkDataServicesWeather
+dotnet new xunit -o CDS.Weather.Tests.Integration -f net8.0
+dotnet sln add CDS.Weather.Tests.Integration
+rem Integration testing will seriliase and deserialise JSON over HTTP. Thus add the Nuget Package below.
+cd CDS.Weather.Tests.Integration
+dotnet add package System.Net.Http.Json
+
 
 
 rem Using the Dockerfile, create the image and test it locally before deploying to K8 cluster.
