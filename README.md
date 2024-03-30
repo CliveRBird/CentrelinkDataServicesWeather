@@ -27,7 +27,7 @@ To generate fake data install Faker.Net
 Required Visual Studio 2022 Plugins
 * Fine Code Coverage (FCC). Required for code coverage inspection. Thus ensuring all production code is covered by a unit test.
 
-TODO: All this could be implemented in a GitLab CI/CD pipeline to
+TODO: Attain iteration zero. Implement in a GitLab CI/CD pipeline to
 
 * Build the CDSWeather project
 * Run the xUnit and Integration tests.
