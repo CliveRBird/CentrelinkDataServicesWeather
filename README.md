@@ -21,6 +21,9 @@ It should be possible to use EntityFrameworkCore InMemory with PostGreSQL or Mon
 * dotnet add package WebMotions.Fake.Authentication.JwtBearer --version 8.0.1
 * dotnet add package System.Net.Http.Json
 
+Required Visual Studio 2022 Plugins
+* Fine Code Coverage (FCC). Required for code coverage inspection. Thus ensuring all production code is covered by a unit test.
+
 TODO: All this could be implemented in a GitLab CI/CD pipeline to
 
 * Build the CDSWeather project
