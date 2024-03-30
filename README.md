@@ -21,6 +21,9 @@ It should be possible to use EntityFrameworkCore InMemory with PostGreSQL or Mon
 * dotnet add package WebMotions.Fake.Authentication.JwtBearer --version 8.0.1
 * dotnet add package System.Net.Http.Json
 
+To generate fake data install Faker.Net
+* dotnet add package Faker.Net
+
 Required Visual Studio 2022 Plugins
 * Fine Code Coverage (FCC). Required for code coverage inspection. Thus ensuring all production code is covered by a unit test.
 
