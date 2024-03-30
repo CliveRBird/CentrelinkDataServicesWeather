@@ -44,7 +44,7 @@ All the elements are present.
 
 Enjoy
 
-Freezing time for time simulation. Possible use case whould be for the unit test to iterate a time range for SUT simulation purposes.
+Freezing time for time simulation. Possible use case whould be for the unit test to iterate for a time range for SUT simulation purposes.
 
 ```
 public interface INowWrapper
@@ -60,49 +60,39 @@ public class NowWrapper : INowWrapper
 
 This is a wrapper to allow injecting the current time as a dependency. To register the wrapper in Program.cs:
 
-
+```
 builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
-
+```
 
 The service provided is
 
+```
 private readonly INowWrapper _nowWrapper;
 
 public MyService(INowWrapper nowWrapper) 
-
 {
-
     _nowWrapper = nowWrapper;
-
 }    
-
 public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
-
+```
 
 To inject the current time to the following unit test
 
-  public void GetTomorrow_NormalDay_TomorrowIsRight()
+```
+public void GetTomorrow_NormalDay_TomorrowIsRight()
+{
 
-  {
+    // Arrange
+    var today = new DateTime(2024, 4, 1);
+    var expected = new DateTime(2024, 4, 2);
+    var nowWrapper = Substitute.For<INowWrapper>();
+    nowWrapper.Now.Returns(today);
+    var myService = new MyService(nowWrapper);
+    
+    // Act
+    var actual = myService.GetTomorrow();
 
-      // Arrange
-      
-      var today = new DateTime(2024, 4, 1);
-      
-      var expected = new DateTime(2024, 4, 2);
-      
-      var nowWrapper = Substitute.For<INowWrapper>();
-      
-      nowWrapper.Now.Returns(today);
-      
-      var myService = new MyService(nowWrapper);
-      
-      // Act
-      
-      var actual = myService.GetTomorrow();
-      
-      // Assert
-      
-      Assert.Equal(expected, actual);
-
-  }
+    // Assert
+    Assert.Equal(expected, actual);
+}
+```
