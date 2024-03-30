@@ -2,7 +2,7 @@
 
 Read CDS.Weather/README.txt for instructions.
 
-This solution includes a single microservice (CDS.Weather), unit and integration tests following a Test Driven Development (TDD) approach. Unit test demonstate both stubs and mocks. Dependency injection has been used in Program.cs.
+This solution includes a single microservice (CDS.Weather), unit and integration tests following a Test Driven Development (TDD) approach. Unit test doubles demonstate both stubs and mocks. Dependency injection has been used in Program.cs.
 A Dockerfile exists to create the image.
 A kubernetes Deployment.yaml and Service.yaml are also included. Multiple manifest files can be applied by using kubectl to the path the manifest files reside in.
 kubectl apply -f /path/to/manifests
