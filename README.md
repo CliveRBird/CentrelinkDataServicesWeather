@@ -85,28 +85,28 @@ public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
 
 To inject the current time to the following unit test
 
-public void GetTomorrow_NormalDay_TomorrowIsRight()
+  public void GetTomorrow_NormalDay_TomorrowIsRight()
 
-{
+  {
 
-    // Arrange
-    
-    var today = new DateTime(2024, 4, 1);
-    
-    var expected = new DateTime(2024, 4, 2);
-    
-    var nowWrapper = Substitute.For<INowWrapper>();
-    
-    nowWrapper.Now.Returns(today);
-    
-    var myService = new MyService(nowWrapper);
-    
-    // Act
-    
-    var actual = myService.GetTomorrow();
-    
-    // Assert
-    
-    Assert.Equal(expected, actual);
+      // Arrange
+      
+      var today = new DateTime(2024, 4, 1);
+      
+      var expected = new DateTime(2024, 4, 2);
+      
+      var nowWrapper = Substitute.For<INowWrapper>();
+      
+      nowWrapper.Now.Returns(today);
+      
+      var myService = new MyService(nowWrapper);
+      
+      // Act
+      
+      var actual = myService.GetTomorrow();
+      
+      // Assert
+      
+      Assert.Equal(expected, actual);
 
-}
+  }
