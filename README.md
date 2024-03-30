@@ -9,7 +9,7 @@ kubectl apply -f /path/to/manifests
 
 TODO: Helm Charts are a more sustainable means to deploy in multiple SDLC environments.
 
-Candidate faker Nuget packages have also been included for unit testing. Also, serves as a reminder regarding which Nuget packages are required. 
+Candidate test double faker Nuget packages have also been included for unit testing. Also, serves as a reminder regarding which Nuget packages are required. 
 
 * dotnet add package OpenWeatherMapSharp
 * dotnet add package NSubstitute
