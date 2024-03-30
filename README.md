@@ -64,12 +64,10 @@ This is a wrapper to allow injecting the current time as a dependency. To regist
 builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
 ```
 
-The, controller class, provides the service
+A, single service class, provides the service
 
 ```
-[ApiController]
-[Route("[controller]")]
-public class MyService : ControllerBase
+public class MyService
 {
 
     private readonly INowWrapper _nowWrapper;
