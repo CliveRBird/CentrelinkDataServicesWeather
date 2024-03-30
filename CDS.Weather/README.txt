@@ -9,7 +9,6 @@ dotnet new sln
 dotnet new webapi -o CDS.Weather -f net8.0
 dotnet sln add CDS.Weather
 
-
 rem From VS Tools, NuGet Package Manager runn the command below.
 NuGet\Install-Package OpenWeatherMapSharp -Version 3.1.4
 rem From package manager browsing the ALL web NuGet repos for AdamTibi.OpenWeather package
@@ -44,8 +43,6 @@ rem Integration testing will seriliase and deserialise JSON over HTTP. Thus add 
 cd CDS.Weather.Tests.Integration
 dotnet add package System.Net.Http.Json
 
-
-
 rem Using the Dockerfile, create the image and test it locally before deploying to K8 cluster.
 cd C:\Users\Administrator\source\repos\CentrelinkDataServicesWeather
 docker build -t CDSWeatherForecast-web-api .
@@ -54,4 +51,8 @@ docker ps
 curl http://localhost:5001/swagger/index.html
 
 rem See K8 Deployment.yaml and Service.yaml manifests to kubernetes deployment.
+Multiple K8 manifest files can be applied by using kubectl to the path the manifest files reside in.
+kubectl apply -f /path/to/manifests
+
+rem TODO: Helm Charts are a more sustainable means to deploy in multiple SDLC environments.
 
