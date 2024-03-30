@@ -34,7 +34,7 @@ TODO: Attain iteration zero. Implement in a GitLab CI/CD pipeline to
 * On test success, create a Docker image.
 * Deploy that image on Kubernetes and create a K8 service.
 
-TDD Pillars within Agile XP Framework [https://en.wikipedia.org/wiki/Extreme_programming]
+Test Driven Development (TDD) Pillars within Agile XP Framework [https://en.wikipedia.org/wiki/Extreme_programming]
 * Test first
 * Red, Green, Refactor (RGR)
   
