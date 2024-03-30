@@ -17,6 +17,14 @@ public class WeatherForecastControllerTests
     }
 
     [Fact]
+    public void Method_Should_When()
+    {
+        // Arrange
+        // Act
+        // Assert
+    }
+
+    [Fact]
     public void ConvertCToF_0Celsius_32Fahrenheit()
     {
         const double EXPECTED = 32d;
