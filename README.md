@@ -64,7 +64,9 @@ public class NowWrapper : INowWrapper
 
 This is a wrapper to allow injecting the current time as a dependency. To register the wrapper in Program.cs:
 
+
 builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
+
 
 The service provided is
 
