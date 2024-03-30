@@ -15,7 +15,7 @@ Candidate test double faker Nuget packages have also been included for unit test
 * dotnet add package NSubstitute
 * dotnet add package NSubstitute.Analyzers.CSharp
 
-It should be possible to use EntityFrameworkCore InMemory with PostGreSQL or Mongo for JSON document handling. RabbitMQ is a consideration for an event bus and a queue.
+It should be possible to use EntityFrameworkCore InMemory with PostGreSQL or Mongo for JSON document handling. RabbitMQ is a consideration for a pub/sub event bus and a queue.
 * dotnet add package Microsoft.EntityFrameworkCore.InMemory
 * dotnet add package RabbitMQ.Fakes.DotNetStandard --version 2.2.1
 * dotnet add package WebMotions.Fake.Authentication.JwtBearer --version 8.0.1
