@@ -5,7 +5,7 @@ using Xunit;
 
 namespace CDS.Weather.Tests.Unit;
 
-public class WeatherForecastControllerTests
+public class WeatherForecastControllerTestsTemplate
 {
 
     [Fact]
