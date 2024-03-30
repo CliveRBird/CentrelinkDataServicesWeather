@@ -4,7 +4,7 @@ Read CDS.Weather/README.txt for instructions.
 
 This solution has unit and integration tests following a Test Driven Development approach. Unit test demonstate both stubs and mocks. Dependency injection has been used in Program.cs.
 A Dockerfile exists to create the image.
-A kubernetes Deployment.yaml and Service.yaml is also included. Multiple manifests file can be applied by using kubectl to the path the manifest files reside in.
+A kubernetes Deployment.yaml and Service.yaml is also included. Multiple manifest files can be applied by using kubectl to the path the manifest files reside in.
 kubectl apply -f /path/to/manifests
 
 TODO: Helm Charts are a more sustainable means to deploy in multiple SDLC environments.
