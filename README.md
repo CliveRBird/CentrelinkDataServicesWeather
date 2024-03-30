@@ -69,7 +69,7 @@ The, controller class, provides the service
 ```
 [ApiController]
 [Route("[controller]")]
-public class MyController : ControllerBase
+public class MyService : ControllerBase
 {
 
     private readonly INowWrapper _nowWrapper;
