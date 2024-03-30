@@ -47,9 +47,13 @@ Enjoy
 Freezing time for time simulation. Possible use case whould be for the unit test to iterate a time range for SUT simulation purposes.
 
 public interface INowWrapper
+
 {
+
     DateTime Now { get; }
+
 }
+
 public class NowWrapper : INowWrapper
 {
     public DateTime Now => DateTime.Now;
