@@ -40,6 +40,17 @@ TDD Pillars within Agile XP Framework [https://en.wikipedia.org/wiki/Extreme_pro
   
 Describe each software feature as a story. That story has a title, description, acceptance criteria and story points. Firstly, design all the necessary class structures from a client (a caller) perspective. Secondly, write all the unit tests. Thirdly, write the implementation code. Fourthly, RGR until green for all unit tests. Move onto next feature and repeat process. For each identified dependency, create a test double in either a stubbed or mocked format. Only use a single test double style across the entire solution.
 
+Domain Driven Design (DDD) Summary
+
+* Contracts (written in *.cs files): This is what the outside world sees. These contracts represent the shape of the data that will be exchanged between the backend and the client. The client should know the data elements of the contract, so it knows what to expect from your headless microservice.
+* Entities (written in *.cs files): The domain objects with identities.
+* Value Objects (written in *.cs files): The domain objects that don’t require an identity.
+* Domain Object (written in *.cs files)s: This is the group of entities and value objects in the system.
+* Repositories (written in *.cs files): These are the classes that will save and load your data from a data store (relational DB, document DB, file system, blob storage, etc).
+* Domain Services (written in *.cs files): This is where the business logic manifests, and it will interact with the repositories for CRUD operations. These services are not exposed to the outside world.
+* Application Services (written in *.cs files): Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
+
+
 All the elements are present.
 
 Enjoy
