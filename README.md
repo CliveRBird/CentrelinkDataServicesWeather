@@ -42,7 +42,7 @@ Describe each software feature as a story. That story has a title, description, 
 
 Domain Driven Design (DDD) Summary
 
-* Contracts (written in *.cs files): This is what the outside world sees. These contracts represent the shape of the data that will be exchanged between the backend and the client. The client should know the data elements of the contract, so it knows what to expect from your headless microservice.
+* Contracts (written in *.cs files): This is what the outside world sees. These contracts represent the shape of the data that will be exchanged between the backend and the client. The client should know the data elements of the contract, so it knows what to expect from a headless microservice.
 * Entities (written in *.cs files): The domain objects with identities.
 * Value Objects (written in *.cs files): The domain objects that don’t require an identity.
 * Domain Object (written in *.cs files)s: This is the group of entities and value objects in the system.
