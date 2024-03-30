@@ -46,6 +46,12 @@ Enjoy
 
 Freezing time for time simulation. Possible use case whould be for the unit test to iterate a time range for SUT simulation purposes.
 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 public interface INowWrapper
 
 {
