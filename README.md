@@ -46,7 +46,7 @@ Domain Driven Design (DDD) Summary
 * Entities (written in *.cs files): The domain objects with identities.
 * Value Objects (written in *.cs files): The domain objects that don’t require an identity.
 * Domain Objects (written in *.cs files): This is the group of entities and value objects in the system.
-* Repositories (written in *.cs files): These are the classes that will save and load your data from a data store (relational DB, document DB, file system, blob storage, etc).
+* Repositories (written in *.cs files): These are the classes that will save and load data from a data store (relational DB, document DB, file system, blob storage, etc). Benefit being Domain Objects use DI repository injection decoupling entities and value objects from their archiectural implementation (e.g. Mongodb.)
 * Domain Services (written in *.cs files): This is where the business logic manifests, and it will interact with the repositories for CRUD operations. These services are not exposed to the outside world.
 * Application Services (written in *.cs files): Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
 
