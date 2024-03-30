@@ -46,25 +46,17 @@ Enjoy
 
 Freezing time for time simulation. Possible use case whould be for the unit test to iterate a time range for SUT simulation purposes.
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
 ```
 public interface INowWrapper
 {
     DateTime Now { get; }
 }
-```
 
 public class NowWrapper : INowWrapper
-
 {
-
     public DateTime Now => DateTime.Now;
-
 }
+```
 
 This is a wrapper to allow injecting the current time as a dependency. To register the wrapper in Program.cs:
 
