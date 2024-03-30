@@ -64,7 +64,7 @@ This is a wrapper to allow injecting the current time as a dependency. To regist
 builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
 ```
 
-The service provided is
+The, controller class, provides the service
 
 ```
 private readonly INowWrapper _nowWrapper;
