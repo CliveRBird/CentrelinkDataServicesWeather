@@ -32,7 +32,7 @@ TDD Pillars
 * Test first
 * Red, Green, Refactor (RGR)
   
-Describe each software feature as a story. That story has a title, description, acceptance criteria and story points. Design the class structure from a client perspective. First, write all the unit tests. Then write the implementation code. RGR until green for all unit tests. Move onto next feature and repeat process.
+Describe each software feature as a story. That story has a title, description, acceptance criteria and story points. Firstly, design all the necessary class structures from a client perspective. Secondly, write all the unit tests. Thirdly, write the implementation code. Fourthly, RGR until green for all unit tests. Move onto next feature and repeat process.
 
 All the elements are present.
 
