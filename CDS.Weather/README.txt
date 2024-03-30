@@ -55,4 +55,3 @@ Multiple K8 manifest files can be applied by using kubectl to the path the manif
 kubectl apply -f /path/to/manifests
 
 rem TODO: Helm Charts are a more sustainable means to deploy in multiple SDLC environments.
-
