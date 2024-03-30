@@ -55,8 +55,11 @@ public interface INowWrapper
 }
 
 public class NowWrapper : INowWrapper
+
 {
+
     public DateTime Now => DateTime.Now;
+
 }
 
 This is a wrapper to allow injecting the current time as a dependency. To register the wrapper in Program.cs:
@@ -66,15 +69,20 @@ builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
 The service provided is
 
 private readonly INowWrapper _nowWrapper;
+
 public MyService(INowWrapper nowWrapper) 
+
 {
+
     _nowWrapper = nowWrapper;
+
 }    
 public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
 
 To inject the current time to the following unit test
 
 public void GetTomorrow_NormalDay_TomorrowIsRight()
+
 {
     // Arrange
     var today = new DateTime(2024, 4, 1);
@@ -86,4 +94,5 @@ public void GetTomorrow_NormalDay_TomorrowIsRight()
     var actual = myService.GetTomorrow();
     // Assert
     Assert.Equal(expected, actual);
+
 }
