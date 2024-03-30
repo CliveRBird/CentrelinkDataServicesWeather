@@ -79,7 +79,9 @@ public MyService(INowWrapper nowWrapper)
     _nowWrapper = nowWrapper;
 
 }    
+
 public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
+
 
 To inject the current time to the following unit test
 
