@@ -51,14 +51,12 @@ require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
-
+```
 public interface INowWrapper
-
 {
-
     DateTime Now { get; }
-
 }
+```
 
 public class NowWrapper : INowWrapper
 
