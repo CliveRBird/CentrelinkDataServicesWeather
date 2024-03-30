@@ -42,8 +42,7 @@ Describe each software feature as a story. That story has a title, description, 
 
 Domain Driven Design (DDD) Summary
 
-<img src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9781803230191/files/image/Figure_7.6_B18370.jpg" alt="Figure 7.6 – A simplified software design view of DDD
-"/>![image](https://github.com/CliveRBird/CentrelinkDataServicesWeather/assets/90135557/e4d5b85b-5eb3-4913-9cdc-74f28379f9d0)
+![image](https://github.com/CliveRBird/CentrelinkDataServicesWeather/assets/90135557/e4d5b85b-5eb3-4913-9cdc-74f28379f9d0)
 
 * Contracts (written in *.cs files): This is what the outside world sees. These contracts represent the shape of the data that will be exchanged between the backend and the client. The client should know the data elements of the contract, so it knows what to expect from a headless microservice.
 * Entities (written in *.cs files): The domain objects with identities.
