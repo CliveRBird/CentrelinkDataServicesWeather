@@ -44,7 +44,7 @@ All the elements are present.
 
 Enjoy
 
-Freezing time for time simulation. Possible use case whould be for the unit test to iterate for a time range for SUT simulation purposes.
+Freezing time for time simulation. Possible use case would be for the unit test to iterate for a time range for SUT simulation purposes.
 
 ```
 public interface INowWrapper
