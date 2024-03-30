@@ -72,7 +72,8 @@ private readonly INowWrapper _nowWrapper;
 public MyService(INowWrapper nowWrapper) 
 {
     _nowWrapper = nowWrapper;
-}    
+}
+
 public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
 ```
 
