@@ -28,6 +28,12 @@ TODO: All this could be implemented in a GitLab CI/CD pipeline to
 * On test success, create a Docker image.
 * Deploy that image on Kubernetes and create a K8 service.
 
+TDD Pillars
+* Test first
+* Red, Green, Refactor (RGR)
+  
+Describe each software feature as a story. That story has a title, description, acceptance criteria and story points. Design the class structure from a client perspective. First, write all the unit tests. Then write the implementation code. RGR until the green for all unit tests. Move onto next feature and repeat process.
+
 All the elements are present.
 
 Enjoy
