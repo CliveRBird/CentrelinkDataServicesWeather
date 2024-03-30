@@ -67,14 +67,20 @@ builder.Services.AddSingleton<INowWrapper>(_ => new NowWrapper());
 The, controller class, provides the service
 
 ```
-private readonly INowWrapper _nowWrapper;
-
-public MyService(INowWrapper nowWrapper) 
+[ApiController]
+[Route("[controller]")]
+public class MyController : ControllerBase
 {
-    _nowWrapper = nowWrapper;
-}
 
-public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
+    private readonly INowWrapper _nowWrapper;
+
+    public MyService(INowWrapper nowWrapper) 
+    {
+      _nowWrapper = nowWrapper;
+    }
+
+    public DateTime GetTomorrow() => _nowWrapper.Now.AddDays(1).Date;
+}
 ```
 
 To inject the current time to the following unit test
