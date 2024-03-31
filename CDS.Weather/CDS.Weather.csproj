@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="K8\**" />
+    <Content Remove="K8\**" />
+    <EmbeddedResource Remove="K8\**" />
+    <None Remove="K8\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AdamTibi.OpenWeather" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.3" />
     <PackageReference Include="NSubstitute" Version="5.1.0" />
@@ -16,7 +23,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="K8\" />
   </ItemGroup>
 
 </Project>
