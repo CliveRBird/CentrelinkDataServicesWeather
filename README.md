@@ -44,14 +44,25 @@ Domain Driven Design (DDD) Summary
 
 ![image](https://github.com/CliveRBird/CentrelinkDataServicesWeather/assets/90135557/e4d5b85b-5eb3-4913-9cdc-74f28379f9d0)
 
+Structure and arrange the Visual Studio Solution such that its multiple projects are arranged as follows
+
+* CDS.WeatherForecast.Contract
+* CDS.WeatherForecast.Domain.Tests.Unit
+* CDS.WeatherForecast.Domain
+* CDS.WeatherForecast.WebApi
+* CDS.WeatherForecast.Website
+
+Having the contents in each project as described below 
+
 * Contracts (written in *.cs files): This is what the outside world sees. These contracts represent the shape of the data that will be exchanged between the backend and the client. The client should know the data elements of the contract, so it knows what to expect from a headless microservice.
 * Entities (written in *.cs files): The domain objects with identities.
 * Value Objects (written in *.cs files): The domain objects that don’t require an identity.
 * Domain Objects (written in *.cs files): This is the group of entities and value objects in the system.
 * Repositories (written in *.cs files): These are the classes that will save and load data from a data store (relational DB, document DB, file system, blob storage, etc). Benefit being Domain Objects use DI repository injection decoupling entities and value objects from their architectural implementation (e.g. Mongodb.)
 * Domain Services (written in *.cs files): This is where the business logic manifests, and it will interact with the repositories for CRUD operations. These services are not exposed to the outside world.
-* Application Services (written in *.cs files): Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
+* Application Services (written in *.cs files) {WebApi}: Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
 
+Noting, Domain Objects and Domain Services are both under CDS...Domain. The WeatherForecast solution would require a more complex problem to better highlight DDD in practice. 
 
 All the elements are present.
 
