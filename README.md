@@ -66,8 +66,8 @@ Noting, Domain Objects and Domain Services are both under CDS...Domain. The Weat
 
 All the elements are present. 
 
-Further detail is offered in reference [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/]
-With a more complex reference solution [https://github.com/dotnet/eShop/blob/main/README.md]
+Further detail is offered in reference [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/].
+A more complex reference solution [https://github.com/dotnet/eShop/blob/main/README.md]
 
 Enjoy
 
