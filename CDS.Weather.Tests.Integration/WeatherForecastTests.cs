@@ -14,7 +14,8 @@ public class WeatherForecastTests
 {
     private const string BASE_ADDRESS = "https://localhost:7225";
     // In reality the test should exercise the Http request over the internet to get the real weather.
-    // I've not applied to the free access token. Simply for demonstration purposes, used Randon over Real.
+    // I've not applied to the free access token. Simply for demonstration purposes, used Random over Real.
+    // The point being this integration test would exercise the http request over the internet.
     // private const string API_URI = "/WeatherForecast/GetRealWeatherForecast";
     private const string API_URI = "/WeatherForecast/GetRandomWeatherForecast";
     private record WeatherForecast(DateTime Date, int TemperatureC, int TemperatureF, string? Summary);
