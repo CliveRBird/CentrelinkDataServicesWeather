@@ -11,14 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDS.Weather.Tests.Unit", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDS.Weather.Tests.Integration", "CDS.Weather.Tests.Integration\CDS.Weather.Tests.Integration.csproj", "{F1FAD016-FC21-4EE6-8216-E3FC02E73BD4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{5D6422E0-6A3A-400B-8F39-D3EC31055128}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Manifests", "Manifests", "{F89C0D6B-8482-4094-A521-510F219284F0}"
-	ProjectSection(SolutionItems) = preProject
-		CDS.Weather\K8\Deployment.yaml = CDS.Weather\K8\Deployment.yaml
-		CDS.Weather\K8\Service.yaml = CDS.Weather\K8\Service.yaml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F53D909-DE0E-4997-B33A-FFCE8D3F7337}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -49,9 +41,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{F89C0D6B-8482-4094-A521-510F219284F0} = {5D6422E0-6A3A-400B-8F39-D3EC31055128}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBCF7472-B443-4207-AAF1-CE24F460B9B8}
