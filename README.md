@@ -64,7 +64,7 @@ Having the contents in each project as described below
 
 Noting, Domain Objects and Domain Services are both under CDS...Domain. The WeatherForecast solution would require a more complex problem to better highlight DDD in practice. 
 
-All the elements are present.
+All the elements are present. Further detail is offered in reference [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/]
 
 Enjoy
 
