@@ -60,7 +60,7 @@ Having the contents in each project as described below
 * Domain Objects (written in *.cs files): This is the group of entities and value objects in the system.
 * Repositories (written in *.cs files): These are the classes that will save and load data from a data store (relational DB, document DB, file system, blob storage, etc). Benefit being Domain Objects use DI repository injection decoupling entities and value objects from their architectural implementation (e.g. Mongodb.)
 * Domain Services (written in *.cs files): This is where the business logic manifests, and it will interact with the repositories for CRUD operations. These services are not exposed to the outside world.
-* Application Services (written in *.cs files) {WebApi}: Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
+* Application Services {WebApi} (written in *.cs files): Controllers in basic scenarios act as application services where they interact with domain services to serve a REST request. Application services are exposed to the outside world.
 
 Noting, Domain Objects and Domain Services are both under CDS...Domain. The WeatherForecast solution would require a more complex problem to better highlight DDD in practice. 
 
