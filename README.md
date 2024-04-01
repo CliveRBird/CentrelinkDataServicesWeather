@@ -91,6 +91,15 @@ dotnet add CDS.WeatherForecast.Domain package Npgsql.EntityFrameworkCore.Postgre
 dotnet add CDS.WeatherForecast.Domain package MongoDB.EntityFrameworkCore
 dotnet add CDS.WeatherForecast.Domain.Tests.Unit package NSubstitute
 dotnet add CDS.WeatherForecast.Domain.Tests.Unit package Microsoft.EntityFrameworkCore.InMemory
+
+dotnet add package OpenWeatherMapSharp
+dotnet add package NSubstitute
+dotnet add package NSubstitute.Analyzers.CSharp
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+dotnet add package RabbitMQ.Fakes.DotNetStandard --version 2.2.1
+dotnet add package WebMotions.Fake.Authentication.JwtBearer --version 8.0.1
+dotnet add package System.Net.Http.Json
+dotnet add package Faker.Net
 ```
 
 All the elements are present. 
