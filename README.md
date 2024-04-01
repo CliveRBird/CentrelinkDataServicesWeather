@@ -64,6 +64,33 @@ Having the contents in each project as described below
 
 Noting, Domain Objects and Domain Services are both under CDS...Domain. The WeatherForecast solution would require a more complex problem to better highlight DDD in practice. 
 
+The arrangement would be something like Create-projects.bat
+```
+md CDSWeatherForecast
+cd CDSWeatherForecast
+dotnet new sln
+rem For a UI
+dotnet new blazorwasm -n CDS.WeatherForecast.Website
+dotnet new webapi -n CDS.WeatherForecast.WebApi
+dotnet new classlib -n CDS.WeatherForecast.Contract
+dotnet new classlib -n CDS.WeatherForecast.Domain
+dotnet new xunit -n CDS.WeatherForecast.Domain.Tests.Unit
+dotnet sln add CDS.WeatherForecast.Website
+dotnet sln add CDS.WeatherForecast.WebApi
+dotnet sln add CDS.WeatherForecast.Contract
+dotnet sln add CDS.WeatherForecast.Domain
+dotnet sln add CDS.WeatherForecast.Domain.Tests.Unit
+dotnet add CDS.WeatherForecast.Website reference CDS.WeatherForecast.Contract
+dotnet add CDS.WeatherForecast.WebApi reference CDS.WeatherForecast.Contract
+dotnet add CDS.WeatherForecast.Domain reference CDS.WeatherForecast.Contract
+dotnet add CDS.WeatherForecast.WebApi reference CDS.WeatherForecast.Domain
+dotnet add CDS.WeatherForecast.Domain.Tests.Unit reference CDS.WeatherForecast.Domain
+dotnet add CDS.WeatherForecast.Domain package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add CDS.WeatherForecast.Domain package MongoDB.EntityFrameworkCore
+dotnet add CDS.WeatherForecast.Domain.Tests.Unit package NSubstitute
+dotnet add CDS.WeatherForecast.Domain.Tests.Unit package Microsoft.EntityFrameworkCore.InMemory
+```
+
 All the elements are present. 
 
 Further detail is offered in reference [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/].
