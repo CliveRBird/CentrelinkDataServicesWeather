@@ -40,7 +40,7 @@ Test Driven Development (TDD) Pillars within Agile XP Framework [https://en.wiki
   
 Describe each software feature as a story. That story has a title, description, acceptance criteria and story points. Firstly, design all the necessary class structures from a client (a caller) perspective. Secondly, write all the unit tests. Thirdly, write the implementation code. Fourthly, RGR until green for all unit tests. Move onto next feature and repeat process. For each identified dependency, create a test double in either a stubbed or mocked format. Only use a single test double style across the entire solution.
 
-To aid overarching cohension structure the neccessary classes and contracts into a Domain Driven Design arrangement. 
+To aid overarching cohesion, structure the neccessary classes and contracts into a Domain Driven Design arrangement. 
 
 Domain Driven Design (DDD) Summary
 
