@@ -95,7 +95,7 @@ dotnet add CDS.WeatherForecast.Domain.Tests.Unit package Microsoft.EntityFramewo
 
 All the elements are present. 
 
-The above strategy can be further evidenced and detailed in Microsoft's .NET-Microservices: Architecture for Containerized NET Applications guide, see [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/].
+The above strategy can be further evidenced and detailed in Microsoft's .NET-Microservices: Architecture for Containerized .NET Applications guide, reference [https://learn.microsoft.com/en-us/dotnet/architecture/microservices/].
 A more complex reference solution [https://github.com/dotnet/eShop/blob/main/README.md]
 
 Enjoy
